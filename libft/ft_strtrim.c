@@ -33,7 +33,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 /*
 int	main(void) // \t\t\n \nsomestring\n  \t -> somestring
 {
-	char s1[] = "  hello i may have fucked your sister  ";
+	char s1[] = "  hello i may have   ";
 	char set[] = " "; // Define the set of characters to trim
 	
 	char *trim = ft_strtrim(s1, set);
