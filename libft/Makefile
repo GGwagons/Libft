@@ -6,7 +6,7 @@
 #    By: miturk <miturk@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/17 11:02:40 by miturk            #+#    #+#              #
-#    Updated: 2023/09/19 15:11:16 by miturk           ###   ########.fr        #
+#    Updated: 2023/12/21 12:41:25 by miturk           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,46 +17,44 @@ CFLAGS    = -Wall -Wextra -Werror
 AR        = ar rcs
 RM         = rm -f
 
-FILES     =    ft_atoi \
-        ft_bzero \
-        ft_calloc \
-        ft_isalnum \
-        ft_isalpha \
-        ft_isascii \
-        ft_isdigit \
-        ft_isprint \
-        ft_itoa \
-        ft_memchr \
-        ft_memcmp \
-        ft_memcpy \
-        ft_memmove \
-        ft_memset \
-        ft_putchar_fd \
-        ft_putendl_fd \
-        ft_putnbr_fd \
-        ft_putstr_fd \
-        ft_split \
-        ft_strchr \
-        ft_strdup \
-        ft_striteri \
-        ft_strjoin \
-        ft_strlcat \
-        ft_strlcpy \
-        ft_strlen \
-        ft_strmapi \
-        ft_strncmp \
-        ft_strnstr \
-        ft_strrchr \
-        ft_strtrim \
-        ft_substr \
-        ft_tolower \
-        ft_toupper \
+SRC_FILES = ft_atoi.c \
+            ft_bzero.c \
+            ft_calloc.c \
+            ft_isalnum.c \
+            ft_isalpha.c \
+            ft_isascii.c \
+            ft_isdigit.c \
+            ft_isprint.c \
+            ft_itoa.c \
+            ft_memchr.c \
+            ft_memcmp.c \
+            ft_memcpy.c \
+            ft_memmove.c \
+			ft_memset.c \
+            ft_putchar_fd.c \
+            ft_putendl_fd.c \
+			ft_putnbr_fd.c \
+			ft_putstr_fd.c \
+			ft_split.c \
+			ft_strchr.c \
+			ft_strdup.c \
+			ft_striteri.c \
+			ft_strjoin.c \
+			ft_strlcat.c \
+			ft_strlcpy.c \
+			ft_strlen.c \
+			ft_strmapi.c \
+			ft_strncmp.c \
+			ft_strnstr.c \
+			ft_strrchr.c \
+			ft_strtrim.c \
+			ft_substr.c \
+			ft_tolower.c \
+			ft_toupper.c \
+			ft_strcmp.c	
 
-SRCS_DIR = ./
-SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
 
-OBJS_DIR = ./
-OBJS = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES)))
+OBJS = $(SRC_FILES:.c=.o)
 
 .c.o: $(SRCS)
 	$(CC) $(CFLAGS) -c -o $@ $<
